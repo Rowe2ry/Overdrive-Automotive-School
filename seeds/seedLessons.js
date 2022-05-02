@@ -53,7 +53,54 @@ const lessonData = [
             <h4>Rivets</h4>
             <p>There are 2 main types of rivets. Metal rivets and plastic rivets. Metal rivets are single use fasteners that are used to join 2 thin-wall materials together permanently. Metal rivets must be
             removed with a drill or chisel and are not meant to be easy to remove. Plastic rivets are used to join thin walled materials in the same way but are often reusable. They are commonly used to hold together plastic sheeting under the car and in the fenders, plastic bumpers and body panels, interior panels, carpeting etc.</p>`,
-        fig2: `./assets/003_PinsRivets.png`
+        fig2: `./assets/003_PinsRivets.png`,
+        fig_caption2: 'An example of a c-clip and of a plastic push rivet.',
+        body3: `<h4>Lug Nuts</h4>
+            <p>A lug nut is a specific type of nut used to hold the wheels onto a car. They get a special mention because they will be encountered very regularly for various forms of automotive maintenance. Lug
+            nuts can be open-ended, closed-ended, security driven, tapered seat, square shouldered, spline drive, or have various other distinguishing characteristics. The most important aspects of working with lug nuts are to use the correct size/type of driving tool (more on types of drive on the next page), and to observe what is called a <strong>torquing sequence</strong>. A torquing sequence is just the order in which fasteners should be tightened down or loosened up, usually in stages. This is done to prevent uneven forces that may warp the part. Alloy wheels and lug nuts are usually the first applications in which you will need to observe a torquing sequence, but it will be a lot more common to use them when doing engine work when you are more experienced later on.</p>`,
+        fig3:`./assets/004_LugNuts.png`,
+        fig_caption_3: 'Examples of 4 and 5 lug nut torquing sequences.',
+        body4: `<p><strong>Tech Tip:</p>
+            <p>A torque sequence should be observed in <em> stages</em>. For example, a 3-stage 5-lug wheel torque sequence set to 100ft. lbs of torque (more information about torque later in this course) would go as follows.
+            <ul>
+            <li>Set torque wrench to 50 ft. lbs. and tighten lug nuts in the torquing sequences order (1,2,3,4,5).</li>
+            <li>Increase the setting on the torque wrench from 50 to 75 ft. lbs and repeat the sequence.</li>
+            <li>Increase wrench setting to the full 100 ft. lbs. and repeat the sequences again. It is customeary to check the first sequence faster one last time at the end. (Example: 1,2,3,4,5,1)</li>`,
+    },
+    {
+        // TODO: seed in Drive Types lesson (page 7 of PDF) | category 2-week 1
+    },
+    {
+        // TODO: seed in Wrenches pt 1 lesson (page 8 of PDF) | category 2-week 1
+    },
+    {
+        // TODO: seed in Wrenches pt 2 lesson (page 9 of PDF) | category 2-week 1
+    }, {
+        // TODO: seed in Sockets pt 1 lesson (page 10 of PDF) | category 2-week 1
+    },
+    {
+        // TODO: seed in Wrenches pt 2 lesson (page 11 of PDF) | category 2-week 1
+    },
+    {
+        // TODO: seed inPliers and other lesson (pages 12 & 13 of PDF) | category 2-week 1
+    },
+    {
+        // TODO: seed inIntro to Safety & Best Practices lesson (not in PDF) | category 3-week 2
+    },
+    {
+        // TODO: seed in Must Have safety lesson (page 15 of PDF) | category 3-week 2
+    },
+    {
+        // TODO: seed in Best Pract: Research lesson (page 16 of PDF) | category 3-week 2
+    },
+    {
+        // TODO: seed in Best Pract: Prep lesson (page 17 of PDF) | category 3-week 2
+    },
+    {
+        // TODO: seed in Best Pract: Mimimize Injusry lesson (page 18 of PDF) | category 3-week 2
     }
+];
 
-]
+const seedLessons = () => Lesson.bulkCreate(lessonData);
+
+module.exports = seedLessons;

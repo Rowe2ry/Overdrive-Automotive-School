@@ -14,6 +14,10 @@ Lesson.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         body1: {
             type: DataTypes.TEXT,
             allowNull: false
