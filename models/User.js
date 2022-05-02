@@ -15,6 +15,11 @@ User.init (
             autoIncrement: true,
             allowNull: false
         },
+        username: {
+            type: DataTypes.STRING,
+            alowNull: false,
+            unique: true
+        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -25,13 +30,14 @@ User.init (
         email: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
             validate: {
                 isEmai: true
             }
         },
-        accessLevel : {
-            type: DataTypes.INTEGER,
-            defaultValue: 1,
+        accessLevel: {
+            type: DataTypes.STRING,
+            defaultValue: 'new',
             allowNull: false
         }
     },
