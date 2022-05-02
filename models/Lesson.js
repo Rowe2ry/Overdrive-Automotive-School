@@ -62,7 +62,7 @@ Lesson.init(
             type: DataTypes.STRING,
             allowNull: true
         },
-        category_id: {
+        cat_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'category',
