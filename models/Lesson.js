@@ -61,6 +61,13 @@ Lesson.init(
         fig_caption4: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        category_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'category',
+                key: 'id'
+            }
         }
     },
     {
