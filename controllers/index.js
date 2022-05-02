@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const apiRoutes = require('./api')
-const homeLogic = require('./logic/homeLogic');
+const homeLogic = require('./controllerLogic/homeLogic');
 
 router.get('/', homeLogic.renderHomePage);
 

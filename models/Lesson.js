@@ -28,7 +28,7 @@ Lesson.init(
         },
         body2: {
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: true
         },
         fig2: {
             type: DataTypes.STRING, // relative path to img
@@ -40,7 +40,7 @@ Lesson.init(
         },
         body3: {
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: true
         },
         fig3: {
             type: DataTypes.STRING, // relative path to img
@@ -52,7 +52,7 @@ Lesson.init(
         },
         body4: {
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: true
         },
         fig4: {
             type: DataTypes.STRING, // relative path to img
