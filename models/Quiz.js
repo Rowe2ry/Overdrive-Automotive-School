@@ -10,123 +10,123 @@ Quiz.init(
             primaryKey: true,
             autoIncrement: true
         },
-        Q1: {
+        q1: {
             type: DataTypes.STRING,
             allowNull:false
         },
-        Q1A1: {
+        q1a1: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q1A2: {
+        q1a2: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q1A3: {
+        q1a3: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q1A4: {
+        q1a4: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q1correctA: {
+        q1correct_a: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Q2: {
+        q2: {
             type: DataTypes.STRING,
             allowNull:false
         },
-        Q2A1: {
+        q2a1: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q2A2: {
+        q2a2: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q2A3: {
+        q2a3: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q2A4: {
+        q2a4: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q2correctA: {
+        q2correct_a: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Q3: {
+        q3: {
             type: DataTypes.STRING,
             allowNull:false
         },
-        Q3A1: {
+        q3a1: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q3A2: {
+        q3a2: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q3A3: {
+        q3a3: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q3A4: {
+        q3a4: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q3correctA: {
+        q3correct_a: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Q4: {
+        q4: {
             type: DataTypes.STRING,
             allowNull:false
         },
-        Q4A1: {
+        q4a1: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q4A2: {
+        q4a2: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q4A3: {
+        q4a3: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q4A4: {
+        q4a4: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q4correctA: {
+        q4correct_a: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Q5: {
+        q5: {
             type: DataTypes.STRING,
             allowNull:false
         },
-        Q5A1: {
+        q5a1: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q5A2: {
+        q5a2: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q5A3: {
+        q5a3: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q5A4: {
+        q5a4: {
             type: DataTypes.STRING,
             sllowNull:false
         },
-        Q5correctA: {
+        q5correct_a: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
