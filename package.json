@@ -1,6 +1,8 @@
 {
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "watch": "nodemon server.js",
+        "seed": "node seeds/seed.js"
     },
     "name": "overdrive-automotive-school",
     "description": "An interactive educational site with questions and feedback",

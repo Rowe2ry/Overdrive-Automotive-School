@@ -128,7 +128,7 @@ const lessonData = [
             <p>Torque wrenches are specialized wrenches that have an adjustable scale on them to measure the torque being applied on the drive. Some torque wrenches heave a digital or analogue read-out of the torque that is being applied in real-time. Other common designs can be adjusted to produce and audible -click- when a certain torque is met/exceeded. The engineers that designed the car have specified a torque value for each fastener. These torque specifications can be referenced on-line or from a FSM (factory service manual) for a specific vehicle. Following torque specifications will prevent fasteners from backing out, parts from warping, and fasteners from breaking. A torque wrench cannot always be used if there are issues with tool clearance, but using one wherever you can will give you a sense of what various torque values feel like. You will also generally learn from experience how much force you should be applying to fasteners that thread into plastic vs aluminum vs steel. How much force to apply on smaller fasteners vs. bigger ones etc.</p>`,
         fig4: `./assets/img/013_OneFootPound.png`,
         fig_caption4: 'One foot pound of torque explained.'
-    },
+    }, /*
     {
         // TODO: seed in Sockets pt 1 lesson (page 10 of PDF) | category 2-week 1
     },
@@ -152,7 +152,7 @@ const lessonData = [
     },
     {
         // TODO: seed in Best Pract: Mimimize Injusry lesson (page 18 of PDF) | category 3-week 2
-    }
+    }  */
 ];
 
 const seedLessons = () => Lesson.bulkCreate(lessonData);
