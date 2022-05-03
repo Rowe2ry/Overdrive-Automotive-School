@@ -12,7 +12,7 @@ Comment.init(
             autoIncrement: true
         },
         body: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         response_body: {
@@ -25,7 +25,7 @@ Comment.init(
         },
         dateCreated: {
             type: DataTypes.DATE,
-            defaultValue: DataType.NOW
+            defaultValue: DataTypes.NOW
         },
         lesson_id: {
             type: DataTypes.INTEGER,

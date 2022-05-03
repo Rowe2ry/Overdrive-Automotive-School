@@ -130,6 +130,10 @@ Quiz.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        reward_code: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         lesson_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -146,3 +150,5 @@ Quiz.init(
         modelName: 'quiz'
     }
 );
+
+module.exports = Quiz;

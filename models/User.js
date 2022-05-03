@@ -36,7 +36,7 @@ User.init (
             }
         },
         accessLevel: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             defaultValue: 'new',
             allowNull: false
         }

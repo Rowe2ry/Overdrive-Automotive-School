@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('connection');
+const sequelize = require('../config/connection');
 
 class Lesson extends Model {};
 
@@ -65,6 +65,10 @@ Lesson.init(
         fig_caption4: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        access_code: {
+            type: DataTypes.STRING,
+            unique: true
         },
         cat_id: {
             type: DataTypes.INTEGER,

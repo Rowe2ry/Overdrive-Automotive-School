@@ -1,27 +1,26 @@
 const { User} = require('../models');
-const bcrypt = require('bcrypt');
-require('dotenv').config();
+// const bcrypt = require('bcrypt');
 
 const userData = [
     {
         username: 'Rowe2ry',
-        password: process.env.SEED_PASS,
+        password: 'secure12345',
         email: 'rowe2ry@yahoo.com',
         accessLevel: 'ADMIN'
     },
     {
         username: 'JohnSmith',
-        password: process.env.SEED_PASS,
+        password: 'secure12345',
         email: 'jsmith@gmail.com'
     },
     {
         username: 'SarahSmith',
-        password: process.env.SEED_PASS,
+        password: 'secure12345',
         email: 'ssmith@gmail.com'
     },
     {
         username: 'JenniferBennifer',
-        password: process.env.SEED_PASS,
+        password: 'secure12345',
         email: 'jbennifer@gmail.com'
     },    
 ]
