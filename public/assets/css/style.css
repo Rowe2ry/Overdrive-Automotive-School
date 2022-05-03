@@ -1,0 +1,7 @@
+:root {
+    --clr-accent-primary : #008977;
+}
+
+.highlight {
+    color: var(--clr-accent-primary);
+}
