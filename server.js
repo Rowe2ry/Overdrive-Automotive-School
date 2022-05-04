@@ -30,7 +30,7 @@ app.use(session({
 
 app.use(routes);
 
-connection.sync({ force: false }). then(() => {
+connection.sync({ force: true }). then(() => {
     app.listen(PORT, () => {
         console.log(`server now listening at http://localhost:${PORT}`);
     })
