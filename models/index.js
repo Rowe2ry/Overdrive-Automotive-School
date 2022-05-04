@@ -1,7 +1,7 @@
 const User = require('./User');
 const Category = require('./Category');
 const Lesson = require('./Lesson');
-// const Comment = require('./Comment');
+const Comment = require('./Comment');
 const Quiz = require('./Quiz');
 
 Category.hasMany(Lesson, {
