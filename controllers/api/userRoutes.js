@@ -1,25 +1,11 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const userLogic = require('../controllerLogic/userLogic');
 
-router.get('/settings', (req,res) =>{
-    try {
-        if (!req.session.loggedIn) {
-            res.redirect('/login');
-        } else {
-            res.render('accountSettings');
-        }
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-// login
-router.post('/login', async (req,res) => {
-    try {
-        const userInfo = await User
-    } catch (err) {
-        res.status(400).json(err);
-    }
-});
+router.get('/login', userLogic.renderLogInPage); // login page
+router.post('/register', userLogic.createNewAccount) // create new account
+router.post('/login', userLogic.loginRequest); // login request
+router.get('/settings', userLogic.renderAccountSettings); //account settings page
+router.put('/settings', userLogic.updateAccount); // change account settings
+router.post('/logout', userLogic.logout); // logout request
 
 module.exports = router;
