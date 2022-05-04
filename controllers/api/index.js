@@ -6,7 +6,7 @@ const commentRoutes = require('./api/commentRoutes');
 const quizRoutes = require('./api/quizRoutes');
 
 router.use('/account', userRoutes);
-router.use('/lessons', lessonRoutes);
 router.use('/category', categoryRoutes);
+router.use('/lessons', lessonRoutes);
 router.use('/comments', commentRoutes);
-router.use('quiz', quizRoutes);
+router.use('quizzes', quizRoutes);

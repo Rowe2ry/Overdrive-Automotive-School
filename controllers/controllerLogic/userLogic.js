@@ -1,7 +1,45 @@
-const req = require('express/lib/request');
 const { User } = require('../../models');
 
-const renderLogInPage = async (req,res) => {
+const getAllInsom = async (req,res) => {
+    try {
+        const allUsers = await User.findAll(
+            { exclude: ['password']}
+        );
+        res.status(200).json(allUsers);
+    } catch (err) {
+        res.status(400).jspon(err);
+    };
+};
+
+const editUser = async (req,res) => {
+    try {
+        User.update(
+            {
+                id: req.body.id,
+                username: req.body.username,
+                password: req.body.password,
+                email: req.body.email,
+                accessLevel: req.body.access_level
+            }
+        );
+    } catch (err) {
+        res.status(400).json(err);
+    };
+};
+
+const deleteUser = (req,res) => {
+    try {
+        User.destroy(
+            {
+                where: { id: req.params.id }
+            }
+        );
+    } catch (err) {
+        res.status(400).json(err);
+    };
+};
+
+const renderLogInPage = (req,res) => {
     try {
         if (!req.session.loggedIn) {
             res.render('login'); // login page
@@ -12,6 +50,19 @@ const renderLogInPage = async (req,res) => {
         res.status(400).json(err);
     };
 };
+
+const renderResgistration = (req,res) => {
+    try {
+        if (!req.session.loggedIn) {
+            res.render('registration');
+        } else {
+            res.redirect('../../')
+        }
+    } catch (err) {
+        res.status(400).json(err);
+    };
+};
+
 const createNewAccount = async (req,res) => {
     try {
         const newUser = User.create(req.body);
@@ -20,6 +71,7 @@ const createNewAccount = async (req,res) => {
         res.status(400).json(err);
     };
 };
+
 const renderAccountSettings = async (req,res) => {
     try {
         if (!req.session.loggedIn) {
@@ -37,6 +89,7 @@ const renderAccountSettings = async (req,res) => {
         res.status(500).json(err);
     };
 };
+
 const loginRequest = async (req,res) => {
     try {
         const userInfo = await User.findOne({
@@ -56,13 +109,14 @@ const loginRequest = async (req,res) => {
             req.session.user_id = thisUser.id;
             req.session.username = thisUser.username;
             req.session.loggedIn = true;
-            req.session.access = thisUser.accessLevel;
+            req.session.access = thisUser.access_level;
         });
         res.status(200).json('log in success!')    
     } catch (err) {
         res.status(400).json(err);
     };
-}
+};
+
 const updateAccount = (req,res) => {
     try {
         if (!req.session.loggedIn) {
@@ -86,6 +140,7 @@ const updateAccount = (req,res) => {
         res.status(500).json(err);
     };
 };
+
 const logOut = async (req,res => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
@@ -97,7 +152,11 @@ const logOut = async (req,res => {
 });
 
 module.exports = {
+    getAllInsom,
+    editUser,
+    deleteUser,
     renderLogInPage,
+    renderResgistration,
     createNewAccount,
     renderAccountSettings,
     loginRequest,

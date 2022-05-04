@@ -1,7 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Comment extends Model {};
+class Comment extends Model {
+    rightsToComment(userId, userAccess) {
+        return userId === this.user_id || userAccess === 'ADMIN';
+    };
+};
 
 Comment.init(
     {

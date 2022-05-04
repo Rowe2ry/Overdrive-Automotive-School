@@ -5,8 +5,8 @@ const bcrypt = require('bcrypt');
 class User extends Model {
     auth(pass) {
         return bcrypt.compareSync(pass, this.password);
-    }
-}
+    };
+};
 
 User.init (
     {
@@ -36,7 +36,7 @@ User.init (
                 isEmail: true
             }
         },
-        accessLevel: {
+        access_level: {
             type: DataTypes.TEXT,
             defaultValue: 'new',
             allowNull: false

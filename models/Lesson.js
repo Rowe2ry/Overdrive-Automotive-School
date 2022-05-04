@@ -1,7 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Lesson extends Model {};
+class Lesson extends Model {
+    auth(userAccess) {
+        return userAccess.includes(this.access_code || 'ADMIN');
+    };
+};
 
 Lesson.init(
     {
