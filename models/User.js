@@ -33,7 +33,7 @@ User.init (
             allowNull: false,
             unique: true,
             validate: {
-                isEmai: true
+                isEmail: true
             }
         },
         accessLevel: {
@@ -68,7 +68,7 @@ User.init (
         },
         sequelize,
         timestamps: false,
-        freezedTableName: true,
+        freezeTableName: true,
         underscored: true,
         modelName: 'user',
     },

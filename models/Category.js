@@ -12,7 +12,7 @@ Category.init(
         },
         name: {
             type: DataTypes.STRING,
-            alloNull: false
+            allowNull: false
         }
     },
     {

@@ -16,19 +16,19 @@ Quiz.init(
         },
         q1a1: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q1a2: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q1a3: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q1a4: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q1correct_a: {
             type: DataTypes.INTEGER,
@@ -40,19 +40,19 @@ Quiz.init(
         },
         q2a1: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q2a2: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q2a3: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q2a4: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q2correct_a: {
             type: DataTypes.INTEGER,
@@ -64,19 +64,19 @@ Quiz.init(
         },
         q3a1: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q3a2: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q3a3: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q3a4: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q3correct_a: {
             type: DataTypes.INTEGER,
@@ -88,19 +88,19 @@ Quiz.init(
         },
         q4a1: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q4a2: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q4a3: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q4a4: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q4correct_a: {
             type: DataTypes.INTEGER,
@@ -112,19 +112,19 @@ Quiz.init(
         },
         q5a1: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q5a2: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q5a3: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q5a4: {
             type: DataTypes.STRING,
-            sllowNull:false
+            allowNull:false
         },
         q5correct_a: {
             type: DataTypes.INTEGER,
