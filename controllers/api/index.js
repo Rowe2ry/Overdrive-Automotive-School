@@ -8,5 +8,3 @@ router.use('/account', userRoutes);
 router.use('/lessons', lessonRoutes);
 router.use('/comments', commentRoutes);
 router.use('quiz', quizRoutes);
-
-module.exports = router;

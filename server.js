@@ -4,7 +4,10 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const path = require('path');
 
-const hbs = exphbs.create({});
+const hbs = exphbs.create({
+    extname: '.handlebars',
+    defaultLayout: 'main'
+});
 
 const app = express();
 
