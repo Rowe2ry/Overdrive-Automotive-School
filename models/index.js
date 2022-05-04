@@ -5,8 +5,7 @@ const Lesson = require('./Lesson');
 const Quiz = require('./Quiz');
 
 Category.hasMany(Lesson, {
-    foreignKey: 'cat_id',
-    onDelete: 'NULL'
+    foreignKey: 'cat_id'
 });
 
 Lesson.belongsTo(Category, {

@@ -8,7 +8,7 @@ Lesson.init(
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
         title: {
             type: DataTypes.STRING,
@@ -82,7 +82,7 @@ Lesson.init(
         sequelize,
         timestamps: false,
         underscored: true,
-        freezedTableName: true,
+        freezeTableName: true,
         modelName: 'lesson'
     }
 );

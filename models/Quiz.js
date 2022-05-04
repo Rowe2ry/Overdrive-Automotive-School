@@ -145,7 +145,7 @@ Quiz.init(
     {
         sequelize,
         timestamps: false,
-        freezedTableName: true,
+        freezeTableName: true,
         underscored: true,
         modelName: 'quiz'
     }
