@@ -6,3 +6,5 @@ router.get('/:id', lessonLogic.viewOneLesson); // view one lesson by id
 router.post('lesson', lessonLogic.addNewLesson); // add new lesson
 router.put('/:id', lessonLogic.editLesson); // edit lesson by id
 router.delete('/:id', lessonLogic.deleteLesson); // delete lesson by id
+
+module.exports = router;

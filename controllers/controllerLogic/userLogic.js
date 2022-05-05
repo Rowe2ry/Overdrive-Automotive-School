@@ -51,7 +51,7 @@ const renderLogInPage = (req,res) => {
     };
 };
 
-const renderResgistration = (req,res) => {
+const renderRegistration = (req,res) => {
     try {
         if (!req.session.loggedIn) {
             res.render('registration');
@@ -141,7 +141,7 @@ const updateAccount = (req,res) => {
     };
 };
 
-const logOut = async (req,res => {
+const logout = async (req,res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
@@ -149,14 +149,14 @@ const logOut = async (req,res => {
     } else {
         res.status(404).end();
     };
-});
+};
 
 module.exports = {
     getAllInsom,
     editUser,
     deleteUser,
     renderLogInPage,
-    renderResgistration,
+    renderRegistration,
     createNewAccount,
     renderAccountSettings,
     loginRequest,

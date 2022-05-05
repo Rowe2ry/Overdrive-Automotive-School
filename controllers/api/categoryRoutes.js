@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const catLogic = require('./categoryLogic');
+const catLogic = require('../controllerLogic/categoryLogic');
 
 router.get('/categories', catLogic.renderCatList); // view all categories as list
 router.get('/insom', catLogic.renderCatList); // view all categories in Insomnia
