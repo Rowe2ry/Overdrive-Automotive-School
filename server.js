@@ -35,6 +35,7 @@ app.set('view engine', 'handlebars');
 // much sadness
 
 app.use(routes);
+app.use(express.static('public'));
 
 connection.sync({ force: false }). then(() => {
     app.listen(PORT, () => {

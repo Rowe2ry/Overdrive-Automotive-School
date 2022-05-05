@@ -127,6 +127,7 @@ const updateAccount = (req,res) => {
         }
         User.Update(
             {
+                username: req.body.username,
                 email: req.body.email,
                 password: req.body.password
             },
