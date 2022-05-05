@@ -1,5 +1,13 @@
-<h2>All Categories Settings page</h2>
+<div class="container">
+    <div class="row">
+        <h3>All Categories</h3>
+    </div>
+    
+    {{#each catData as |category|}}
+    <div class="row">
+        <h4 class="category" data-cat="{{category.id}}">{{category.name}}</h4>
+    </div>
+    {{/each}}
+</div>
 
-{{#each catData as |category|}}
-<h3>{{category.name}}</h3>
-{{/each}}
+<script src="/assets/scripts/allcats.js"></script>

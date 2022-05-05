@@ -13,13 +13,13 @@
     <header>
         <nav class="container">
             <ul class="u-pull-right nav__list">
-                <li class="nav__item"><a href="http://localhost:3001/">Home</a></li>
-                {{#if loggedIn}}
-                <li class="nav__item"><a href="http://localhost:3001/api/category/categories">Lessons</a></li>
-                <li class="nav__item"><a href="#">Logout</a></li>
+                <li class="nav__item"><a href="/">Home</a></li>
+                {{#if logged_in}}
+                <li class="nav__item"><a href="/api/category/categories">Lessons</a></li>
+                <li id ="logout" class="nav__item"><a href="#">Logout</a></li>
                 {{else}}
-                <li class="nav__item"><a href="#">Login</a></li>
-                <li class="nav__item"><a href="#">Register</a></li>
+                <li class="nav__item"><a href="/api/account/login">Login</a></li>
+                <li class="nav__item"><a href="/api/account/register">Register</a></li>
                 {{/if}}
             </ul>
         </nav>
@@ -40,5 +40,9 @@
             </div>
         </div>
     </footer>
+
+    {{#if logged_in}}
+    <script src="/assets/scripts/logout.js"></script>
+    {{/if}}
 </body>
 </html>

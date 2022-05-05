@@ -12,7 +12,6 @@ const path = require('path');
 
 const hbs = exphbs.create({});
 
-
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -23,8 +22,9 @@ const models = require('./models');
 
 app.use(session({
     secret: 'Hush now',
+    cookie: {},
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     store: new SequelizeStore({
         db: connection
     })
@@ -34,7 +34,9 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 // much sadness
 
+app.use(express.json())
 app.use(routes);
+app.use(express.urlencoded());
 app.use(express.static('public'));
 
 connection.sync({ force: false }). then(() => {

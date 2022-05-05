@@ -6,7 +6,9 @@ const renderCatList = async (req,res) => {
             include: [{ model: Lesson, attributes: ['Title', 'Description'] }]
         });
         const catData = await rawCatData.map(cat => cat.get({ plain:true }));
-        res.render('categories', {catData});
+        res.render('categories', {
+            catData,
+            logged_in: req.session.logged_in});
     } catch (err) {
         res.status(400).json(err);
     };
@@ -32,7 +34,10 @@ const viewOneCat = async (req,res) => {
         });
         const thisCat = await thisRawCat.get({ plain: true });
         // res.status(200).json(thisCat);
-        res.render('oneCat', { thisCat });
+        res.render('oneCat', {
+            thisCat,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         res.status(400).json(err);
     };

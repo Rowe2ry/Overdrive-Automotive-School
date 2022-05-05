@@ -1,7 +1,13 @@
-<h2>Viewing one category</h2>
+<div class="container">
+    <div class="row">
+        <h2>{{thisCat.name}}</h2>
+    </div>
+    
+    <div class="row">
+        {{#each thisCat.lessons as |lesson|}}
+        <h4 class="category">{{lesson.title}}</h4>
+        {{/each}}
+    </div>
+</div>
 
-<h3>{{thisCat.name}}</h3>
-
-{{#each thisCat.lessons as |lesson|}}
-<h4>{{lesson.title}}</h4>
-{{/each}}
+<script src="/assets/scripts/onecat.js"></script>

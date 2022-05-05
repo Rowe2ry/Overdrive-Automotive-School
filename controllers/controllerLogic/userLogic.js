@@ -1,3 +1,4 @@
+const express = require('express');
 const { User } = require('../../models');
 
 const getAllInsom = async (req,res) => {
@@ -41,7 +42,7 @@ const deleteUser = (req,res) => {
 
 const renderLogInPage = (req,res) => {
     try {
-        if (!req.session.loggedIn) {
+        if (!req.session.logged_in) {
             res.render('login'); // login page
         } else {
             res.redirect('../../'); // out of account, out of api to home
@@ -53,8 +54,8 @@ const renderLogInPage = (req,res) => {
 
 const renderRegistration = (req,res) => {
     try {
-        if (!req.session.loggedIn) {
-            res.render('registration');
+        if (!req.session.logged_in) {
+            res.render('register');
         } else {
             res.redirect('../../')
         }
@@ -74,7 +75,7 @@ const createNewAccount = async (req,res) => {
 
 const renderAccountSettings = async (req,res) => {
     try {
-        if (!req.session.loggedIn) {
+        if (!req.session.logged_in) {
             res.redirect('/login');
         } else {
             const thisUser = await User.findOne({
@@ -92,26 +93,28 @@ const renderAccountSettings = async (req,res) => {
 
 const loginRequest = async (req,res) => {
     try {
-        const userInfo = await User.findOne({
-            where: {
-                email: req.body.email
-            }
-        });
+        // console.log('login request made');
+        // console.log(`req body looks like ${req.body.email}`);
+        const userInfo = await User.findOne({ where: { email: req.body.email } });
+        // console.log(`\n====== RAW ======\n ${userInfo}`);
         const thisUser = userInfo.get({plain:true});
+        // console.log(`\n====== RAW ======\n ${thisUser}`);
         if (!thisUser) {
-            res.status(400).json({ message: 'Email or password was incorrect.'});
+            console.log('couldnt find user');
+            res.status(400).json('-user-Email or password was incorrect.');
         };
-        const authenticate = await thisUser.auth(req.body.password);
+        const authenticate = await userInfo.auth(req.body.password);
         if (!authenticate) {
-            res.status(400).json({ message: 'Email or password was incorrect.'});
+            console.log('couldn\'t authenticate password');
+            res.status(400).json('-authenticate-Email or password was incorrect.');
         };
         req.session.save(() => {
             req.session.user_id = thisUser.id;
             req.session.username = thisUser.username;
-            req.session.loggedIn = true;
+            req.session.logged_in = true;
             req.session.access = thisUser.access_level;
-        });
-        res.status(200).json('log in success!')    
+            res.status(200).json('log in success!')
+        });    
     } catch (err) {
         res.status(400).json(err);
     };
@@ -119,7 +122,7 @@ const loginRequest = async (req,res) => {
 
 const updateAccount = (req,res) => {
     try {
-        if (!req.session.loggedIn) {
+        if (!req.session.logged_in) {
             res.redirect('./login');
         };
         if (!req.session.user_id) {
@@ -141,7 +144,7 @@ const updateAccount = (req,res) => {
 };
 
 const logout = async (req,res) => {
-    if (req.session.loggedIn) {
+    if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
         });
