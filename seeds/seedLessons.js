@@ -9,12 +9,11 @@ const lessonData = [
         fig1: `001_intro.jpg`,
         fig_caption1: 'This is the look of success you will become familiar with if you make working on cars a hobby of yours.',
         body2: `<ul>
-            <li><strong>Week 1 (CRS):<strong> We will start by learning the names and functions of tools used for automotive
+            <li><strong>Week 1 (CRS):</strong> We will start by learning the names and functions of tools used for automotive
             maintenance and repair. It is important to know what a tool is called when communicating in a shop with other technicians, mechanics, or friends while working on a mechanical project.</li>
             <li><strong>Week 2 (CRS):</strong> We will move on to safety and best practices. There are many bad habits that can be picked up in an auto shop or garage work environment. Some of these bad habits will make the repair take longer, some will break tools, others can cause you harm. It is very important that you take the safety course
             very seriously as reckless accidents when working on cars can cause the loss of fingers, blindness, skin burns, or even death. The labs in this course are designed to be relatively simple and safe however it is paramount that the safety lessons taught in week 2 be observed in all labs in this course.</li>
-            <li><strong>Week 3 (LAB):</strong> is all about performing the most common automotive maintenance procedures. Students will learn how to perform an oil change, inspect or replace an air filter, rotate the tires. If this lab is completed efficiently and time allows, students will also learn how to change windshield wiper blades, a
-            burned out headlight bulb, a cabin air filter, and to check and top off fluids. <strong>NOTE: Students will NOT be allowed to participate if they have not completed the safety section of this course, or if they show up on LAB day without the appropriate attire.</strong></li>
+            <li><strong>Week 3 (LAB):</strong> is all about performing the most common automotive maintenance procedures. Students will learn how to perform an oil change, inspect or replace an air filter, rotate the tires. If this lab is completed efficiently and time allows, students will also learn how to change windshield wiper blades, a burned out headlight bulb, a cabin air filter, and to check and top off fluids. <strong>NOTE: Students will <span class="highlight">NOT</span> be allowed to participate if they have not completed the safety section of this course, or if they show up on LAB day without the appropriate attire.</strong></li>
             <li><strong>Week 4 (CRS):</strong> Students will learn about the basic mechanical systems that make a car work. How does an engine turn gasoline into movement? How do the steering, suspension, and braking systems work? What wear items throughout the car need to be inspected and maintained to keep the car driving like new?</li>
             <li><strong>Week 5 (LAB):</strong> Students will learn how to service the braking system on a car. This includes removing
             old brake pads, removing the old brake rotor, installing the new parts and bleeding the system. If this repair is performed efficiently and time allows, students will get to see demonstrations of automotive systems with the car in the air as well as a few more visual inspection and diagnostic tips.</li>
@@ -22,15 +21,14 @@ const lessonData = [
             community. We will have signed up a few people to bring their cars in need of a repair. The specific events of this week will vary greatly based on what response is given by the community. If reaching out to the community for repair work doesn't go well, a different lab will be constructed by the course leader.</li>
             </ul>`,
         body3:`
-            If you are reading this course material but are <strong>not</strong> taking the 6 week class, I hope you enjoy the course material. Please be very careful when working on an automobile to protect both yourself and the machinery. Nothing in this material is proprietary information, so if you have any questions about any terms used, or would like supplemental information on a topic, I encourage you to use Google and continue your research. At the time of this wiring, I have had over 16 years of experience working on my personal cars as a hobby. This course has been put together as a passion project to equip others with the knowledge I have gained along the way in order to give back to my community. I am not a professional mechanic but I am extremely passionate about this hobby. Be mindful of this when taking any advice from this manual.`,
+            <p>If you are reading this course material but are <strong>not</strong> taking the 6 week class, I hope you enjoy the course material. Please be very careful when working on an automobile to protect both yourself and the machinery. Nothing in this material is proprietary information, so if you have any questions about any terms used, or would like supplemental information on a topic, I encourage you to use Google and continue your research. At the time of this wiring, I have had over 16 years of experience working on my personal cars as a hobby. This course has been put together as a passion project to equip others with the knowledge I have gained along the way in order to give back to my community. I am not a professional mechanic but I am extremely passionate about this hobby. Be mindful of this when taking any advice from this manual.</p>`,
         access_code: 'new'
     },
     {
         title: 'Tools and Hardware',
         description: 'Automotive fasteners',
         cat_id: 2, // week 1
-        body1: `<h3>Common Automotive Fasteners</h3>
-            <h4>What is a fastener?</h4>
+        body1: `<h4>What is a fastener?</h4>
             <p>A <em>fastener</em> is the generic term for the components that hold 2 or more parts of a machine together. Fasteners include, but are not limited to:</p>
             <ul>
             <li> Nuts & Bolts </li>
@@ -40,11 +38,11 @@ const lessonData = [
             <li> Pins </li>
             <li> Rivets </li>
             </ul>
-            <p><h4>Nuts & Bolts</h4>
-            Nuts and Bolts are <em>threaded</strong> fasteners. Threaded fasteners have a spiraling raised geometry around a shaft that screws into a matching negative geometry. Nuts and bolts are used to "sandwich" 2 parts together. The nut has <em>internal threads</em> and the bolt has <em>external threads</em> that <em>mesh</em> together. The <strong class="highlight">thread count</strong> (TPI or threads per inch) and <strong class="highlight">pitch</strong> (angle of the threads) must match on the nut and the bolt for them to be used together. You will most likely match nuts and bolts with a ”guess and test” method rather than knowing the pitch numerically.`,
+            <h4>Nuts & Bolts</h4>
+            <p>Nuts and Bolts are <em>threaded</em> fasteners. Threaded fasteners have a spiraling raised geometry around a shaft that screws into a matching negative geometry. Nuts and bolts are used to "sandwich" 2 parts together. The nut has <em>internal threads</em> and the bolt has <em>external threads</em> that <em>mesh</em> together. The <strong class="highlight">thread count</strong> (TPI or threads per inch) and <strong class="highlight">pitch</strong> (angle of the threads) must match on the nut and the bolt for them to be used together. You will most likely match nuts and bolts with a ”guess and test” method rather than knowing the pitch numerically.</p>`,
         fig1: `002_NutsBolts.png`,
         fig_caption1: `Bolt specifications are given as thread count and thread pitch as well as drive size and length. Nuts and bolts are designed to work together.`,
-        body2: `<h4><strong>Washers</h4>
+        body2: `<h4>Washers</h4>
             <p> A washer is used to spread the clamping load of a fastener to a larger surface area than just the head of the fastener. Sometimes used to prevent the fastener from tearing through the part under stress, or some times to protect the part from scratching or finnish damage. Some washers even prevent the fasteners from backing out, or are used to take “slop” out of 2 loosely fitting parts.<p>
             <h4>Screws</h4>
             <p>A screw is much like a bolt however the screw is not held captive by a nut. A screw can use coarse threads (sometimes tapered) to directly dig into the material it is being driven into. A screw may also have finer threads (machine threads) in the same fashion that a bolt does however it will be driven into threads cast or cut directly in the part it is screwing into rather than into a nut. A bolt is technically a screw if it is being used this way (without an accompanying nut).</p>
@@ -60,7 +58,7 @@ const lessonData = [
             <p>A lug nut is a specific type of nut used to hold the wheels onto a car. They get a special mention because they will be encountered very regularly for various forms of automotive maintenance. Lug nuts can be open-ended, closed-ended, security driven, tapered seat, square shouldered, spline drive, or have various other distinguishing characteristics. The most important aspects of working with lug nuts are to use the correct size/type of driving tool (more on types of drive on the next page), and to observe what is called a <strong class="highlight">torquing sequence</strong>. A torquing sequence is just the order in which fasteners should be tightened down or loosened up, usually in stages. This is done to prevent uneven forces that may warp the part. Alloy wheels and lug nuts are usually the first applications in which you will need to observe a torquing sequence, but it will be a lot more common to use them when doing engine work when you are more experienced later on.</p>`,
         fig3:`004_LugNuts.png`,
         fig_caption_3: 'Examples of 4 and 5 lug nut torquing sequences.',
-        body4: `<p><strong>Tech Tip:</p>
+        body4: `<p><strong>Tech Tip:</strong></p>
             <p>A torque sequence should be observed in <em> stages</em>. For example, a 3-stage 5-lug wheel torque sequence set to 100ft. lbs of torque (more information about torque later in this course) would go as follows.
             <ul>
             <li>Set torque wrench to 50 ft. lbs. and tighten lug nuts in the torquing sequences order (1,2,3,4,5).</li>
@@ -69,7 +67,7 @@ const lessonData = [
         access_code: 'VV-_W1L1_-VV'
     },
     {
-        title: 'Common Threaded Fastener Drive Types',
+        title: 'Common Drive Types',
         description: 'Drive types for bolts and screws',
         cat_id: 2, // week 1
         body1:`<h4>Driving Fasteners</h4>

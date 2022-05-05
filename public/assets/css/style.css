@@ -2,6 +2,71 @@
     --clr-accent-primary : #008977;
 }
 
+p,
+li,
+figcaption {
+    font-size: 1.9rem;
+}
+
+header,
+footer {
+    background-color:#008977;
+}
+
+header {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    margin-top: 1.5rem;
+}
+
+figcaption {
+    margin-bottom:1.875em;
+    font-weight: bold;
+    color: var(--clr-accent-primary);
+}
+
+.hero {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.separator {
+    background-color:#008977;
+    min-height: 2.5rem;
+    margin: .75rem 0;
+}
+
 .highlight {
     color: var(--clr-accent-primary);
+}
+
+.nav__list {
+    margin-top: .5em;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 1.5em;
+    list-style: none;
+}
+
+.nav__item,
+.nav__item a {
+    color:#fff;
+}
+
+.nav__item:hover,
+.nav__item a:hover,
+.nav__item:focus-visible,
+.nav__item a:focus-visible {
+    color:#fff;
+}
+
+.footer__caption {
+    color:#fff;
+    padding: 1.5em 0;
 }

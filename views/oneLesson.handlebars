@@ -1,29 +1,33 @@
-<h1>{{thisLesson.title}}</h1>
+<div class="container">
+    <h2><strong>{{thisLesson.title}}</strong> >> {{thisLesson.description}}</h2>
 
-<h2>{{thisLesson.description}}</h2>
-
-{{{thisLesson.body1}}}
-<img src="/assets/img/{{thisLesson.fig1}}" alt="{{fig_caption1}}">
-<figcaption>{{thisLesson.fig_caption1}}</figcaption>
-
-{{#if thisLesson.body2}}
-{{{thisLesson.body2}}}
-{{/if}}
-{{#if thisLesson.fig2}}
-<img src="/assets/img/{{thisLesson.fig2}}" alt="{{fig_caption2}}">
-<figcaption>{{thisLesson.fig_caption2}}</figcaption>
-{{/if}}
-{{#if thisLesson.body3}}
-{{{thisLesson.body3}}}
-{{/if}}
-{{#if thisLesson.fig3}}
-<img src="/assets/img/{{thisLesson.fig3}}" alt="{{fig_caption3}}">
-<figcaption>{{thisLesson.fig_caption3}}</figcaption>
-{{/if}}
-{{#if thisLesson.body4}}
-{{{thisLesson.body4}}}
-{{/if}}
-{{#if thisLesson.fig4}}
-<img src="/assets/img/{{thisLesson.fig4}}" alt="{{fig_caption4}}">
-<figcaption>{{thisLesson.fig_caption4}}</figcaption>
-{{/if}}
+    <div class="row">
+        <article class="u-full-width">
+            {{{thisLesson.body1}}}
+            <img class="u-full-width" src="/assets/img/{{thisLesson.fig1}}" alt="{{fig_caption1}}">
+            <figcaption>{{thisLesson.fig_caption1}}</figcaption>
+    
+            {{#if thisLesson.body2}}
+            {{{thisLesson.body2}}}
+            {{/if}}
+            {{#if thisLesson.fig2}}
+            <img class="u-full-width" src="/assets/img/{{thisLesson.fig2}}" alt="{{fig_caption2}}">
+            <figcaption>{{thisLesson.fig_caption2}}</figcaption>
+            {{/if}}
+            {{#if thisLesson.body3}}
+            {{{thisLesson.body3}}}
+            {{/if}}
+            {{#if thisLesson.fig3}}
+            <img class="u-full-width" src="/assets/img/{{thisLesson.fig3}}" alt="{{fig_caption3}}">
+            <figcaption>{{thisLesson.fig_caption3}}</figcaption>
+            {{/if}}
+            {{#if thisLesson.body4}}
+            {{{thisLesson.body4}}}
+            {{/if}}
+            {{#if thisLesson.fig4}}
+            <img class="u-full-width" src="/assets/img/{{thisLesson.fig4}}" alt="{{fig_caption4}}">
+            <figcaption>{{thisLesson.fig_caption4}}</figcaption>
+            {{/if}}
+        </article>
+    </div>
+</div>

@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Overdrive Automotive school</title>
 </head>
 <body>
-    <h1>It do be what it do be.</h1>
+    <header>
+        <nav class="container">
+            <ul class="u-pull-right nav__list">
+                <li class="nav__item"><a href="http://localhost:3001/">Home</a></li>
+                {{#if loggedIn}}
+                <li class="nav__item"><a href="http://localhost:3001/api/category/categories">Lessons</a></li>
+                <li class="nav__item"><a href="#">Logout</a></li>
+                {{else}}
+                <li class="nav__item"><a href="#">Login</a></li>
+                <li class="nav__item"><a href="#">Register</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Overdrive Automotive School</h1>
+    </div>
+
+    <div class="separator"></div>
+
     {{{ body }}}
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <p class="footer__caption">Chris Rowe 2022©</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
