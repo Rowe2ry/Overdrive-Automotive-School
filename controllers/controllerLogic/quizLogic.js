@@ -12,10 +12,7 @@ const getAllQuizzes = async (req,res) => {
 
 const renderQuizPage = async (req,res) => {
     try {
-        const thisRawQuiz = await Quiz.findByPk(req.params.id,
-            {
-                include: [{ model: Lesson, attributes: ['Title'] }]
-            });
+        const thisRawQuiz = await Quiz.findByPk(req.params.id);
         const thisQuiz = await thisRawQuiz.get({ plain:true });
         res.render('quiz', { thisQuiz });
     } catch (err) {

@@ -40,6 +40,12 @@ figcaption {
     margin: .75rem 0;
 }
 
+.small-divider {
+    background-color:#008977;
+    min-height: .375rem;
+    margin: .75rem 0;
+}
+
 .highlight {
     color: var(--clr-accent-primary);
 }

@@ -9,6 +9,6 @@ router.use('/account', userRoutes);
 router.use('/category', categoryRoutes);
 router.use('/lessons', lessonRoutes);
 router.use('/comments', commentRoutes);
-router.use('quizzes', quizRoutes);
+router.use('/quizzes', quizRoutes);
 
 module.exports = router;
