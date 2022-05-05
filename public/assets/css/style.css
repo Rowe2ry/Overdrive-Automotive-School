@@ -13,6 +13,10 @@ footer {
     background-color:#008977;
 }
 
+h1 {
+    margin-top: 2.75rem;
+}
+
 header {
     margin-bottom: 1.5rem;
 }
@@ -37,13 +41,13 @@ figcaption {
 .separator {
     background-color:#008977;
     min-height: 2.5rem;
-    margin: .75rem 0;
+    margin: .75rem 0 2.75rem 0;
 }
 
 .small-divider {
     background-color:#008977;
     min-height: .375rem;
-    margin: .75rem 0;
+    margin: .75rem 0 2.75rem 0;
 }
 
 .highlight {
@@ -90,4 +94,17 @@ figcaption {
 
 .category:hover {
     background-color: #00AB99;
+}
+
+.pass_match_error,
+.pass_len_error {
+    color: #FF0000;
+}
+
+.pass_good {
+    color:#008977;
+}
+
+.invisible {
+    display: none;
 }

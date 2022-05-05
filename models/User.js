@@ -54,7 +54,7 @@ User.init (
             beforeCreate: async (userData) => {
                 userData.email = await userData.email.toLowerCase();
                 userData.password = await bcrypt.hash(userData.password, 10);
-                return newUserData;
+                return userData;
             },
             beforeUpdate: async (updatedUserData) => {
                 if (updatedUserData.email) {

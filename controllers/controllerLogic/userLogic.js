@@ -66,8 +66,13 @@ const renderRegistration = (req,res) => {
 
 const createNewAccount = async (req,res) => {
     try {
-        const newUser = User.create(req.body);
-        res.status(200).json(newUser);
+        const newUser = await User.create({
+            username: req.body.username,
+            password: req.body.password,
+            email: req.body.email,
+          });
+        // res.status(200).json('user created');
+        res.status(200).redirect('/');
     } catch (err) {
         res.status(400).json(err);
     };

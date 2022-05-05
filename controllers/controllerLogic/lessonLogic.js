@@ -26,7 +26,8 @@ const viewOneLesson = async (req,res) => {
         if (userAccess) {
                 res.render('oneLesson', {
                 thisLesson,
-                userName
+                userName,
+                logged_in: req.session.logged_in
             });
         };
     } catch (err) {

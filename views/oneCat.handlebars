@@ -5,8 +5,11 @@
     
     <div class="row">
         {{#each thisCat.lessons as |lesson|}}
-        <h4 class="category">{{lesson.title}}</h4>
+        <h4 class="category" data-less="{{lesson.id}}">{{lesson.title}}</h4>
         {{/each}}
+        {{#unless thisCat.lessons}}
+        <h3>The lessons for the category have not been added yet. check back again soon.</h3>
+        {{/unless}}
     </div>
 </div>
 

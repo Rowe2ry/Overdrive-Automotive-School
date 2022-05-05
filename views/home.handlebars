@@ -20,8 +20,10 @@
             <h3>So how do I access the coursework?</h3>
 
             <p>Simply create an account and log in. The lesson list will be made available to you by way of a link titled "lessons" in the nav bar at the top right of htis page when you are logged in. To access any lesson, you must have passed a small quiz from the lesson before it. As you continue to progress, you will have more and more of the coursework available to you for your review.</p>
-
-            <a href="api/account/register"></a><button class="button-primary">Register Now</button>
+            {{#unless logged_in}}
+            <a href="/api/account/register"><button class="button-primary">Register Now</button></a>
+            <p>Already have an account? <em><a href="/api/account/login">Sign in here.</a></em></p>
+            {{/unless}}
 
         </div>
     </div>

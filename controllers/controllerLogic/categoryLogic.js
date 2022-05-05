@@ -17,7 +17,7 @@ const renderCatList = async (req,res) => {
 const renderCatListInsom = async (req,res) => {
     try {
         const rawCatData = await Category.findAll({
-            include: [{ model: Lesson, attributes: ['title', 'description'] }]
+            include: [{ model: Lesson, attributes: ['id','title', 'description'] }]
         });
         const catData = await rawCatData.map(cat => cat.get({ plain:true }));
         res.status(200).json(catData);
@@ -30,7 +30,7 @@ const viewOneCat = async (req,res) => {
     try {
         const thisRawCat = await Category.findByPk(req.params.id,
         {
-               include: [{ model: Lesson, attributes: ['title', 'description'] }]
+               include: [{ model: Lesson, attributes: ['id','title', 'description'] }]
         });
         const thisCat = await thisRawCat.get({ plain: true });
         // res.status(200).json(thisCat);
