@@ -68,9 +68,47 @@ const editQuiz = (req,res) => {
     };
 };
 
-const gradeQuiz = (req,res) => {
+const gradeQuiz = async (req,res) => {
+    // clicking the answer button on the page will do this post request using the quiz id in the /api/quizzes/submit/req.params.id and then the body of the submit will be an array of 5 integers (i) where 0 < i < 5 (1 thru 4) and they will be checked against this quiz's correct answers. If 4 out of 5 of the questions are correct, the user access level will be updated to include the access code on their access string property.
     try {
-        
+        const userAnswers = [
+            req.body.q1a,
+            req.body.q2a,
+            req.body.q3a,
+            req.body.q4a,
+            req.body.q5a,
+        ];
+        const thisRawQuiz = await Quiz.findByPk(req.params.id);
+        const thisQuiz = await thisRawQuiz.get({ plain:true });
+        const correctAnswers = [
+            thisQuiz.q1correct_a,
+            thisQuiz.q2correct_a,
+            thisQuiz.q3correct_a,
+            thisQuiz.q4correct_a,
+            thisQuiz.q5correct_a,
+        ];
+        let numCorrect = 0; // baseline at zero
+        for(let i =0; i < 5; i++) { // compare uswers answers to correct, iterate thru both arrays
+            numCorrect += userAnswers[i] == correctAnswers[i] ? 1 : 0; // double equals sign here just because its okay if one is a string and one is a number, if they're the same value, we're good
+        };
+        if (numCorrect < 4) {
+            res.status(500).json({ message: 'Sorry you did not pass this quiz. Please reread the lesson and try again.'});
+        } else {
+            const theRawUser = await User.findOne({ where: { id:req.session.user_id } });
+            const thisUser = theRawUser.get({ plain:true });
+            let currentAccess = thisUser.access_level;
+            currentAccess = currentAccess.concat(thisQuiz.reward_code);
+            User.update(
+                {
+                    access_level: currentAccess  
+                },
+                {
+                    where: { id: req.session.user_id }
+                }
+            )
+        };
+        res.redirect('../../category/categories');
+
     } catch (err) {
         res.status(400).json(err);
     };

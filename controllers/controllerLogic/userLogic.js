@@ -131,9 +131,7 @@ const updateAccount = (req,res) => {
                 password: req.body.password
             },
             {
-                where: {
-                    id: req.session.user_id
-                },
+                where: { id: req.session.user_id },
         });
         res.status(200).json( { message: 'Account information successfully updated.'})
     } catch (err) {
