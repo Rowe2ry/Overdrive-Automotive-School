@@ -30,7 +30,7 @@ const monitorPwInputs = () => {
     };
 };
 
-const createAccount = (event) => {
+const createAccount = async (event) => {
     event.preventDefault();
 
     const data = {
@@ -47,11 +47,12 @@ const createAccount = (event) => {
             body: JSON.stringify(data),
             headers: { 'Content-Type': 'application/json' }
         });
+
         if (response.ok) {
             document.location.replace('/');
-          } else {
-            alert('Something went wrong');
-          }
+        } else {
+            document.location.replace('/');
+        };
     };
 };
 

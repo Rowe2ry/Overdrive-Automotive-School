@@ -21,7 +21,7 @@ const viewOneLesson = async (req,res) => {
     try {
         const thisRawLesson = await Lesson.findByPk(req.params.id);
         const thisLesson = thisRawLesson.get({ plain:true });
-        const userAccess = true // thisRawLesson.auth(req.session.access); // check user can access this lesson
+        const userAccess = thisRawLesson.auth(req.session.access); // check user can access this lesson
         const userName = req.session.username;
         if (userAccess) {
                 res.render('oneLesson', {

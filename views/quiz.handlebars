@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="u-full-width">
-            <form action="">
+            <form id="quiz" data-quiz_id="{{thisQuiz.id}}">
     
             <p id ="q1">1. {{thisQuiz.q1}}</p>
             <label class="q1a1">
@@ -100,10 +100,16 @@
                 <input type="radio" id="q5a4" name="q5" value="4">
                 <span class="label-body">{{thisQuiz.q5a4}}</span>
             </label>
-    
+
+            <div class="small-divider"></div>
+            <h5>If you pass the quiz, pressing the button below will take you to the categories page where you can go to the next lesson. If you did not pass, you will be redirected to the lesson fore this quiz to study the content again.</h5>
+            <div class="small-divider"></div>
+
             <input id="submit_quiz" class="button-primary" type="submit" value="submit">
     
             </form>
         </div>
     </div>
 </div>
+
+<script src="/assets/scripts/quiz.js"></script>

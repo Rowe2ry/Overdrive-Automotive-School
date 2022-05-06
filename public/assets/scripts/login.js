@@ -13,15 +13,15 @@ const loginRequest = async (event) => {
       const response = await fetch('/api/account/login', {
         method: 'POST',
         body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' }
       });
   
       if (response.ok) {
         document.location.replace('/');
       } else {
         alert('Failed to log in');
-      }
-    }
+      };
+    };
   };
   
   document

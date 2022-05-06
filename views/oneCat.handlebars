@@ -3,14 +3,22 @@
         <h2>{{thisCat.name}}</h2>
     </div>
     
+    <div class="small-divider"></div>
+        <div class="row">
+            <h4>If one of the below links is not responding, it means you do not have access for that lesson</h4>
+        </div>
+    <div class="small-divider"></div>
+
     <div class="row">
         {{#each thisCat.lessons as |lesson|}}
-        <h4 class="category" data-less="{{lesson.id}}">{{lesson.title}}</h4>
+        <h4 class="category" data-less="{{lesson.id}}" data-access="{{lesson.access_code}}">{{lesson.title}}</h4>
         {{/each}}
         {{#unless thisCat.lessons}}
         <h3>The lessons for the category have not been added yet. check back again soon.</h3>
         {{/unless}}
     </div>
 </div>
+
+<div id="key" class="invisible" data-user_access="{{user_access}}"></div>
 
 <script src="/assets/scripts/onecat.js"></script>

@@ -35,6 +35,7 @@ const deleteUser = (req,res) => {
                 where: { id: req.params.id }
             }
         );
+        res.status(200).json('user removed');
     } catch (err) {
         res.status(400).json(err);
     };
@@ -71,8 +72,7 @@ const createNewAccount = async (req,res) => {
             password: req.body.password,
             email: req.body.email,
           });
-        // res.status(200).json('user created');
-        res.status(200).redirect('/');
+        res.status(200).json('user created');
     } catch (err) {
         res.status(400).json(err);
     };

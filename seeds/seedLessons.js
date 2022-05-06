@@ -92,7 +92,7 @@ const lessonData = [
         title: 'Wrenches (Part 1)',
         description: 'Basic Wrenches',
         cat_id: 2, // week 1
-        body1: `<h3>Wrenches</h3>
+        body1: `<h4>Wrenches</h4>
             <p>Wrenches are tools used for driving threaded fasteners with a high amount of torque (or rotational force) using leverage. There are many kinds of wrenches with a large variety of common wrenches and hundred of specialized wrenches for specific applications. Understanding which type of wrench will best suit your situation will go a <strong class="highlight">long way</strong> towards making your mechanic work go as smoothly as possible and familiarization with these tools will come with practice. This is so important, we are going to review wrenches in 2 sections.</p>
             <h4>Open ended</h4>
             <p>The simplest type of wrench is an Open Ended Wrench. Sometimes called a crescent wrench, This type of wrench has 2 parallel jaws that span a distance equal to the wrench's size. The size of the wrench will be stamped or printed on the handle near the working head of the wrench. Open ended wrenches can be used to drive hex and square heads.</p>`,
@@ -104,7 +104,7 @@ const lessonData = [
         fig_caption2: 'An example of a double ended box ended wrench. Usually if you have one of these in your toolset, the 2 ends will have a different size. (Ex 10mm & 12mm)',
         body3: `<h4>Combination</h4>
             <p>The most popular basic wrench you will find in any store-bought “mechanic's tool set”. The Combination Wrench (or Combo Wrench) has both a box end on one side <em>and</em> an open end on the other. The tool sets you buy will usually have 12-points on the box side of the combo wrenches.</p>`,
-        fig3: `009_combinationWrench.png`,
+        fig3: `009_CombinationWrench.png`,
         fig_caption3: 'You will see and use this type of wrench all the time. Between this and the socket wrench (discussed in the next section), all other tool use will probably only 5-10% of the time and this will be the remaining 90-95%.',
         access_code: 'VV-_W1L3_-VV'
     },
@@ -112,14 +112,13 @@ const lessonData = [
         title: 'Wrenches (Part 2)',
         description: 'Advanced Wrenches',
         cat_id: 2, // week 1
-        body1: `<h3>Wrenches Part 2</h3>
-            <h4>Socket Wrenches</h4>
+        body1: `<h4>Socket Wrenches</h4>
             <p>This is the most commonly used tool in any garage in the world. 99% of the time, for hand tool use, a mechanic will be using a ratcheting socket wrench if it can fit in the tight space where they need to work. The advantages of this type of wrench are many. The ratcheting action allows for driving fasteners with a very short tool "swing". The tool can be used with numerous accessories to engage the fastener. This type of wrench is actually used as 2 pieces. The driver and the sockets. The driver (called a ratchet if it is a ratcheting driver) comes in various sizes and uses a square drive to engage the sockets. Sockets will be discussed in greater detail further in the next lesson. That section will also into depth about all of the adaptors and socket types we can use to utilize this tool to work for us. There are 3 socket wrench drive sizes that are the most common. 1/4", 3/8", & 1/2" Recall square drives are sized based on the length of one side of the square.`,
         fig1: `010_SocketWrench.png`,
         fig_caption1: 'Here we see how a socket wrench (ratcheting driver) is used in conjunction with a socket.',
         body2: `<h4>Adjustable Wrenches</h4>
             <p>Adjustable wrenches, sometimes called Monkey wrenches, are wrenches that have movable jaws that can be adjusted by manipulating a thumb-driven worm screw. These are great because they have an infinite number of sizes within a set range. They are however very bulky and hard to fit into tight space. The adjustment will sometimes "wander" around and drift away from the size you would like to use. It is recommended to put a small adjustable wrench somewhere in your car so that, in the event of a breakdown, you have a versatile tool you can use to possibly perform a roadside repair. Adjustable wrenches will also help if you are missing the correct size wrench to drive a fastener that is an uncommon size. Lastly, these can also be used a small weak clamp for holding 2 things together while setting an adhesive.</p>`,
-        fig2: `011_adjustableWrench.png`,
+        fig2: `011_AdjustableWrench.png`,
         fig_caption2: 'Here you can see how turning the worm screw opens and closes the jaws of the tool.',
         body3: `<h4>Flare Wrenches</h4>
             <p>Flare wrenches, sometimes called line wrenches, are specialty wrenches that are used for disconnecting line fittings. They look like 6-point box end wrenches that have a slot cut in them. They are technically open ended but they have drive engaging faces on all 6 sides of the hex fastener rather than a set of parallel jaws like a conventional open ended wrench. Since brake and hydraulic lines usually have aluminum fasteners (soft metal), these wrenches are preferred to prevent rounding of those types of fasteners.</p>`,
@@ -130,12 +129,32 @@ const lessonData = [
         fig4: `013_OneFootPound.png`,
         fig_caption4: 'One foot pound of torque explained.',
         access_code: 'VV-_W1L4_-VV'
-    }, /*
-    {
-        // TODO: seed in Sockets pt 1 lesson (page 10 of PDF) | category 2-week 1
     },
     {
-        // TODO: seed in Wrenches pt 2 lesson (page 11 of PDF) | category 2-week 1
+        // TODO: seed in Sockets pt 1 lesson (page 10 of PDF) | category 2-week 1
+        title: 'Sockets',
+        description: 'Sockets Part 1',
+        cat_id: 2, // week 1
+        body1: `<h4>Hex Sockets</h4>
+            <p>The real hero of the shop is the socket wrench, and without the end pieces used to do the driving, <strong class=highlight>Sockets</strong> socket wrenches wouldn't do any good. Because cars and engine bays have such crowded and complex layouts, many different types and shapes of sockets have been developed along with many wonderful adapters to aid in gaininag access to the drive heads of nuts and bolts.</p>
+            <h4>12 Point sockets vs 6 Point</h4>
+            <p>To aid in quick and easy repair work, tool manufacturers designed the <strong class=highlight>12 point socket</strong>. This socket is named for the 12 point star geometry that one sees when looking at the drive faces from above. The advantage of this type of socket is that it can engage with a hex nut or bolt head in 12 different positions within 360° of rotation. This means that a mechanic does not have to work as hard to line up the socket drive faves to that of the fastener drive faces. It does however come at a cost. This is where <strong class=highlight">6 point sockets</strong> come in. The 6 sided shape is exactly the same as the nut or bolt that it drives. The 6 point socket is making full contact face-to-face with the fastener and is spreading the stress out across more metal. this makes a 6 point socket <em>much less likely</em> to round out the corners of the fastener. If a hex fastener is made into a round fastener, it is <strong>significantly</strong> harder to remove or install. See the image below for a visual representation of this phenomenon.</p>`,
+        fig1: `014_12pointVs6point.png`,
+        fig_caption1: 'A visual representation of 12 vs 6 point hex drives',
+        body2: `<h4>Other Distinguishing features in Sockets</h4>
+            <p>Sockets can vary in more ways than just how many points they have. The list below is in now way exhaustive, that is to say, that there are many more variations than what are listed. But they can give you an idea. Its also good to note that sockets can share two or more of these features. One day, you'll need to ask your buddy to hand you a "12 point, thin walled, deep well socket", and you'll be happy you know how to ask for it.</p>
+            <ul>
+            <li><strong>Shallow Sockets</strong> low profile sockets for fitting in tight spaces (depth)</li>
+            <li><strong>Thin Wall</strong> Sockets with a very thin metal thickness between the outside edge and the drive faces. These sockets will give more radial clearance but are more fragile to cracking under stress.</li>
+            <li><strong>Deep Well</strong> long sockets used to drive a nut that has a long threaded bolt section protruding from it.</li>
+            <li><strong>Imact-Grade Sockets</strong> identified by their black color, these sockets are hardened and usually feature beefier wall thickness, these sockets have a manufacturer claim that they are designed to withstand the extremely brutal forces of being driven with an impact wrench.</li>
+            </ul>`,
+        fig2: `015_SocketFeatures.png`,
+        fig_caption2: 'Sockets come in many variations. Learn to describe the distinguishing characteristics you need.',
+        access_code: 'VV-_W1L5_-VV'
+    }, /*
+    {
+        // TODO: seed in Sockets pt 2 lesson (page 11 of PDF) | category 2-week 1
     },
     {
         // TODO: seed inPliers and other lesson (pages 12 & 13 of PDF) | category 2-week 1

@@ -96,6 +96,11 @@ figcaption {
     background-color: #00AB99;
 }
 
+.unavailable,
+.unavailable:hover {
+    background-color: #AAAAAA;
+}
+
 .pass_match_error,
 .pass_len_error {
     color: #FF0000;

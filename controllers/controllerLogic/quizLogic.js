@@ -14,7 +14,10 @@ const renderQuizPage = async (req,res) => {
     try {
         const thisRawQuiz = await Quiz.findByPk(req.params.id);
         const thisQuiz = await thisRawQuiz.get({ plain:true });
-        res.render('quiz', { thisQuiz });
+        res.render('quiz', {
+            thisQuiz,
+            logged_in: req.session.logged_in    
+        });
     } catch (err) {
         res.status(400).json(err);
     };
@@ -80,6 +83,7 @@ const gradeQuiz = async (req,res) => {
         ];
         const thisRawQuiz = await Quiz.findByPk(req.params.id);
         const thisQuiz = await thisRawQuiz.get({ plain:true });
+        console.log(thisQuiz);
         const correctAnswers = [
             thisQuiz.q1correct_a,
             thisQuiz.q2correct_a,
@@ -91,23 +95,31 @@ const gradeQuiz = async (req,res) => {
         for(let i =0; i < 5; i++) { // compare uswers answers to correct, iterate thru both arrays
             numCorrect += userAnswers[i] == correctAnswers[i] ? 1 : 0; // double equals sign here just because its okay if one is a string and one is a number, if they're the same value, we're good
         };
+        console.log(`they got ${numCorrect} correct`);
         if (numCorrect < 4) {
-            res.status(500).json({ message: 'Sorry you did not pass this quiz. Please reread the lesson and try again.'});
+            res.status(500).json('quiz failed');
         } else {
             const theRawUser = await User.findOne({ where: { id:req.session.user_id } });
             const thisUser = theRawUser.get({ plain:true });
             let currentAccess = thisUser.access_level;
             currentAccess = currentAccess.concat(thisQuiz.reward_code);
-            User.update(
+            const updated = await User.update(
                 {
                     access_level: currentAccess  
                 },
                 {
                     where: { id: req.session.user_id }
                 }
-            )
+            );
+            req.session.save(() => {
+                req.session.user_id = thisUser.id;
+                req.session.username = thisUser.username;
+                req.session.logged_in = true;
+                req.session.access = currentAccess;
+                req.session.reload
+                res.redirect('../../category/categories');
+            });
         };
-        res.redirect('../../category/categories');
 
     } catch (err) {
         res.status(400).json(err);
