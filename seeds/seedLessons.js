@@ -154,8 +154,8 @@ const lessonData = [
         access_code: 'VV-_W1L5_-VV'
     },
     {
-        // TODO: seed in Sockets pt 2 lesson (page 11 of PDF) | category 2-week 1
-        title: 'Sockets',
+        // seed in Sockets pt 2 lesson (page 11 of PDF) | category 2-week 1
+        title: 'Sockets (cont.)',
         description: 'Part 2: Accessories',
         cat_id: 2, // week 1
         body1: `<h4>Drive Adapters</h4>
