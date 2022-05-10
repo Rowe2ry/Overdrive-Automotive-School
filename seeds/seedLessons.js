@@ -156,14 +156,14 @@ const lessonData = [
     {
         // TODO: seed in Sockets pt 2 lesson (page 11 of PDF) | category 2-week 1
         title: 'Sockets',
-        description: 'Sockets (Part 2)',
+        description: 'Part 2: Accessories',
         cat_id: 2, // week 1
         body1: `<h4>Drive Adapters</h4>
             <p>These are adapters that allow sockets of a different drive size to be installed onto an otherwise non-compatible socket wrench. These can be handy if you have a 1/4" drive thin wall socket that you would like to use at the end of a 3/8" drive extension. Or to drive a very large socket that has a 1/2" drive with a 1/4" drive socket wrench due to not having room for a larger handled socket wrench.</p>`,
         fig1: `016_SocketDriveAdapters.png`,
         fig_caption1: 'The drive adapters adapt from one size square drive to another.',
         body2: `<h4>Extensions</h4>
-            <p>Extensions are useful metal shafts with a female square drive on one end and a male square drive on the other. These are used to drive sockets in areas too cramped to put the socket wrench into place. Extensions come in all sorts of drive sizes and lengths.</p>`,
+            <p>Extensions are useful metal shafts with a female square drive on one end and a male square drive on the other. They come in many different sizes and lengths to get the perfect fit. These are used to drive sockets in areas too cramped to put the socket wrench into place. Extensions come in all sorts of drive sizes and lengths.</p>`,
         fig2: `017-SocketExtensions.png`,
         fig_caption2: 'Extensions can move your socket further down into the engine bay so that the tool can swing around farther away from the fastener in open space.',
         body3: `<h4>Swivels</h4>
