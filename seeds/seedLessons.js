@@ -131,7 +131,7 @@ const lessonData = [
         access_code: 'VV-_W1L4_-VV'
     },
     {
-        // TODO: seed in Sockets pt 1 lesson (page 10 of PDF) | category 2-week 1
+        // seed in Sockets pt 1 lesson (page 10 of PDF) | category 2-week 1
         title: 'Sockets',
         description: 'Sockets Part 1',
         cat_id: 2, // week 1
@@ -152,10 +152,26 @@ const lessonData = [
         fig2: `015_SocketFeatures.png`,
         fig_caption2: 'Sockets come in many variations. Learn to describe the distinguishing characteristics you need.',
         access_code: 'VV-_W1L5_-VV'
-    }, /*
+    },
     {
         // TODO: seed in Sockets pt 2 lesson (page 11 of PDF) | category 2-week 1
-    },
+        title: 'Sockets',
+        description: 'Sockets (Part 2)',
+        cat_id: 2, // week 1
+        body1: `<h4>Drive Adapters</h4>
+            <p>These are adapters that allow sockets of a different drive size to be installed onto an otherwise non-compatible socket wrench. These can be handy if you have a 1/4" drive thin wall socket that you would like to use at the end of a 3/8" drive extension. Or to drive a very large socket that has a 1/2" drive with a 1/4" drive socket wrench due to not having room for a larger handled socket wrench.</p>`,
+        fig1: `016_SocketDriveAdapters.png`,
+        fig_caption1: 'The drive adapters adapt from one size square drive to another.',
+        body2: `<h4>Extensions</h4>
+            <p>Extensions are useful metal shafts with a female square drive on one end and a male square drive on the other. These are used to drive sockets in areas too cramped to put the socket wrench into place. Extensions come in all sorts of drive sizes and lengths.</p>`,
+        fig2: `017-SocketExtensions.png`,
+        fig_caption2: 'Extensions can move your socket further down into the engine bay so that the tool can swing around farther away from the fastener in open space.',
+        body3: `<h4>Swivels</h4>
+            <p>Swivels are components that mount between the socket and the socket wrench (as are the other 2 items on this page) however a swivel will allow the socket to be driven at an angle other than perpendicular(the only option without swivels). Swivels are often incredibly useful in allowing a socket to be driven around an object on the car that would otherwise have to be removed in order to gain access to drive the fastener.</p>`,
+        fig3: `018_Swivels.png`,
+        fig_caption3: 'A swivel gives you the ability to angle the tool and its extensions “off-axis” of the fastener to clear obstacles.',
+        access_code: 'VV-_W1L6_-VV'
+    }, /*
     {
         // TODO: seed inPliers and other lesson (pages 12 & 13 of PDF) | category 2-week 1
     },
