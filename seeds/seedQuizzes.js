@@ -2,7 +2,7 @@ const { Quiz } = require('../models');
 
 quizData =[
     {
-        q1: 'In the lesson plan what does "CRS" stand for?',
+        q1: 'In the lesson plan, what does "CRS" stand for?',
         q1a1: 'Credited Roster System',
         q1a2: 'Classroom Session',
         q1a3: 'Car Reevaluation Standard',
@@ -148,7 +148,7 @@ quizData =[
         q2a1: 'the distance between the jaws',
         q2a2: 'the length of the handle',
         q2a3: 'the number of engaging faces',
-        q2a4: 'the drive type (Torx, Philips, Slotted, etc.',
+        q2a4: 'the drive type (Torx, Philips, Slotted, etc.)',
         q2correct_a: 1,
         q3: 'When would you use a flare wrench over an open ended wrench?',
         q3a1: 'when working on hydraulic lines with soft aluminum fasteners',
@@ -179,8 +179,8 @@ quizData =[
         q1a4: 'no, the sockets are the key reason socket wrenches are so popular',
         q1correct_a: 4,
         q2: 'Which is NOT an advantage of a 6 point socket over a 12 point socket',
-        q2a1: '6 point sockets are stronger',
-        q2a2: '6 point sockets are less likely to round out a rusty fastener',
+        q2a1: 'a 6 point socket is stronger',
+        q2a2: 'a 6 point socket is less likely to round out a rusty fastener',
         q2a3: 'a 6 point socket is easier to engage the fastener with',
         q2a4: 'a 6 point fastener makes more metal-to-metal contact',
         q2correct_a: 3,
