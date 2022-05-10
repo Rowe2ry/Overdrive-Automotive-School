@@ -113,7 +113,7 @@ const lessonData = [
         description: 'Advanced Wrenches',
         cat_id: 2, // week 1
         body1: `<h4>Socket Wrenches</h4>
-            <p>This is the most commonly used tool in any garage in the world. 99% of the time, for hand tool use, a mechanic will be using a ratcheting socket wrench if it can fit in the tight space where they need to work. The advantages of this type of wrench are many. The ratcheting action allows for driving fasteners with a very short tool "swing". The tool can be used with numerous accessories to engage the fastener. This type of wrench is actually used as 2 pieces. The driver and the sockets. The driver (sometimes called a “ratchet” if it is a ratcheting driver) comes in various sizes and uses a square drive to engage the sockets. Sockets will be discussed in greater detail further in the next lesson. That section will also into depth about all of the adaptors and socket types we can use to utilize this tool to work for us. There are 3 socket wrench drive sizes that are the most common. 1/4", 3/8", & 1/2" Recall square drives are sized based on the length of one side of the square.`,
+            <p>This is the most commonly used tool in any garage in the world. 99% of the time, for hand tool use, a mechanic will be using a ratcheting socket wrench if it can fit in the tight space where they need to work. The advantages of this type of wrench are many. The ratcheting action allows for driving fasteners with a very short tool "swing". The tool can be used with numerous accessories to engage the fastener. This type of wrench is actually used as 2 pieces. The driver and the sockets. The driver (sometimes called a “ratchet” if it is a ratcheting driver) comes in various sizes and uses a square drive to engage the sockets. Sockets will be discussed in greater detail further in the next lesson. That section will also into depth about all of the adaptors and socket types we can use to utilize this tool to work for us. There are 3 socket wrench drive sizes that are the most common. 1/4", 3/8", & 1/2" Recall square drives are sized based on the length of one side of the square.</p>`,
         fig1: `010_SocketWrench.png`,
         fig_caption1: 'Here we see how a socket wrench (ratcheting driver) is used in conjunction with a socket.',
         body2: `<h4>Adjustable Wrenches</h4>
@@ -171,24 +171,148 @@ const lessonData = [
         fig3: `018_Swivels.png`,
         fig_caption3: 'A swivel gives you the ability to angle the tool and its extensions “off-axis” of the fastener to clear obstacles.',
         access_code: 'VV-_W1L6_-VV'
-    }, /*
-    {
-        // TODO: seed inPliers and other lesson (pages 12 & 13 of PDF) | category 2-week 1
     },
     {
+        // TODO: seed inPliers and other lesson (pages 12 & 13 of PDF) | category 2-week 1
+        title: 'Pliers',
+        description: 'Types of Pliers',
+        cat_id: 2, // week 1
+        body1: `<h4>What are pliers?</h4>
+            <p>Pliers are tools with 2 handles that are squeezed together to clamp a pair of jaws around a fastener or work piece. Pliers have a way of coming in handy in most repairs in one way or another.</p>
+            <h4>Square Nose</h4>
+            <p>These are just the standard common shape of a basic pair of pliers. The jaws are almost always textured on the working side of the jaws to aid in gripping.</p>
+            <h4>Needle Nose</h4>
+            <p>These pliers have a thin tapering pair of jaws used to get into tight places. As the name implies, these thin jaws are pointy like a needle. This allows them to fit into tight spaces to grab onto smaller objects.</p>`,
+        fig1: `020_Pliers.png`,
+        fig_caption1: 'You can see that the square jaw pliers are stronger, and the more delicate needle nose jaws are much smaller. As is usual in the case of tools, the beefier a tool is, the more robust it is at the cost of being too bulky to fit into tight spaces.',
+        body2: `<h4>Locking Pliers</h4>
+            <p>Sometimes referred to as “vice-grips”, these pliers can be clamped onto a piece and then locked into place to continue holding the part even when the mechanic removes his or her hand from the pliers. These are incredibly useful for holding on tight keeping the work piece still while you do what you need to do to the work piece.</p>
+            <h4>Reverse Pliers</h4>
+            <p>Very uncommon and not often used, these kinds of pliers actually move the jaws apart rather than together when the handles are squeezed. They can be used to spread something open, or to grab an inner section of a part for removal. While they are not common to see or use, in some situations they are seemingly the only tool that will get the job done.</p>
+            <h4>Snap Ring Pliers</h4>
+            <p>A specialized type of plier used to remove or install snap rings. These types of fasteners are used commonly in automotive applications where part retention inside of a bore, or on a pin are required with very low profile fastener interference. Without snap ring pliers, removing or installing snap rings is a seemingly impossible task. There are 2 kinds of snap rings and 2 kinds of snap ring pliers. Internal snap rings are squeezed together by internal snap ring pliers for removal or installation. External snap rings, and spread apart by external snap ring pliers that open when the handles are squeezed together.</p>`,
+        fig2: `019_SnapRingPliers.png`,
+        fig_caption2: 'Here we can see an example of internal snap ring pliers as they would be used to squeeze the open ends of an internal snap ring together.',
+        body3: `<h4>Snips</h4>
+            <p>Similar to a pair of scissors, snips have hardened and tapered blades instead of textured jaws for cutting wires, zip-ties, or other thinner items that will put up more of a fight than paper. These are particularly useful for cutting through thick steel cables.</p>
+            <h4>Tin snips/Metal shears</h4>
+            <p>Again similar to a pair of scissors but incredibly heavy duty, these are used to cut through sheet metals.</p>`,
+        access_code: 'VV-_W1L7_-VV'
+    }, /*
+    {
         // TODO: seed inIntro to Safety & Best Practices lesson (not in PDF) | category 3-week 2
+        title: '',
+        description: '',
+        cat_id: 3, // week 2
+        body1: `<h4></h4>
+            <p></p>`,
+        fig1: ``,
+        fig_caption1: '',
+        body2: `<h4></h4>
+            <p></p>`,
+        fig2: ``,
+        fig_caption2: '',
+        body3: `<h4></h4>
+            <p></p>`,
+        fig3: ``,
+        fig_caption3: '',
+        body4: `<h4></h4>
+            <p></p>`,
+        fig4: ``,
+        fig_caption4: '',
+        access_code: 'VV-_W1L8_-VV'
     },
     {
         // TODO: seed in Must Have safety lesson (page 15 of PDF) | category 3-week 2
+        title: '',
+        description: '',
+        cat_id: 3, // week 2
+        body1: `<h4></h4>
+            <p></p>`,
+        fig1: ``,
+        fig_caption1: '',
+        body2: `<h4></h4>
+            <p></p>`,
+        fig2: ``,
+        fig_caption2: '',
+        body3: `<h4></h4>
+            <p></p>`,
+        fig3: ``,
+        fig_caption3: '',
+        body4: `<h4></h4>
+            <p></p>`,
+        fig4: ``,
+        fig_caption4: '',
+        access_code: 'VV-_W1L9_-VV'
     },
     {
         // TODO: seed in Best Pract: Research lesson (page 16 of PDF) | category 3-week 2
+        title: '',
+        description: '',
+        cat_id: 3, // week 2
+        body1: `<h4></h4>
+            <p></p>`,
+        fig1: ``,
+        fig_caption1: '',
+        body2: `<h4></h4>
+            <p></p>`,
+        fig2: ``,
+        fig_caption2: '',
+        body3: `<h4></h4>
+            <p></p>`,
+        fig3: ``,
+        fig_caption3: '',
+        body4: `<h4></h4>
+            <p></p>`,
+        fig4: ``,
+        fig_caption4: '',
+        access_code: 'VV-_W1L10_-VV'
     },
     {
         // TODO: seed in Best Pract: Prep lesson (page 17 of PDF) | category 3-week 2
+        title: '',
+        description: '',
+        cat_id: 3, // week 2
+        body1: `<h4></h4>
+            <p></p>`,
+        fig1: ``,
+        fig_caption1: '',
+        body2: `<h4></h4>
+            <p></p>`,
+        fig2: ``,
+        fig_caption2: '',
+        body3: `<h4></h4>
+            <p></p>`,
+        fig3: ``,
+        fig_caption3: '',
+        body4: `<h4></h4>
+            <p></p>`,
+        fig4: ``,
+        fig_caption4: '',
+        access_code: 'VV-_W1L11_-VV'
     },
     {
-        // TODO: seed in Best Pract: Mimimize Injusry lesson (page 18 of PDF) | category 3-week 2
+        // TODO: seed in Best Pract: Minimize Injury lesson (page 18 of PDF) | category 3-week 2
+        title: '',
+        description: '',
+        cat_id: 3, // week 2
+        body1: `<h4></h4>
+            <p></p>`,
+        fig1: ``,
+        fig_caption1: '',
+        body2: `<h4></h4>
+            <p></p>`,
+        fig2: ``,
+        fig_caption2: '',
+        body3: `<h4></h4>
+            <p></p>`,
+        fig3: ``,
+        fig_caption3: '',
+        body4: `<h4></h4>
+            <p></p>`,
+        fig4: ``,
+        fig_caption4: '',
+        access_code: 'VV-_W1L13_-VV'
     }  */
 ];
 
