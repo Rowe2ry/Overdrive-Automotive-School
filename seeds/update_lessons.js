@@ -1,4 +1,4 @@
-const { Lesson, Quiz } = require('../models');
+const { Comment, Lesson, Quiz } = require('../models');
 const seedLessons = require('./seedLessons');
 const seedQuizzes = require('./seedQuizzes');
 
@@ -7,6 +7,8 @@ const sequelize = require('../config/connection');
 const seedDb = async () => {
     await sequelize.sync({ force:false });
     console.log('\n ========== DATABASE ✅ ========== \n');
+    await Comment.sync({ force: true });
+    console.log('\n ========== RECREATED COMMENTS ✅ ========== \n');
     await Lesson.sync({ force: true });
     console.log('\n ========== RECREATED LESSONS ✅ ========== \n');
     await Quiz.sync({ force: true });
