@@ -1,3 +1,4 @@
+const { Lesson, Quiz } = require('../models');
 const seedLessons = require('./seedLessons');
 const seedQuizzes = require('./seedQuizzes');
 
