@@ -214,9 +214,9 @@ const lessonData = [
             <p>A tapered pyramid designed to make it easier to pour liquids without spilling.</p>
             <h4>Scan Gauge</h4>
             <p>A computerized scanner that can read error codes from a car's built-in ECU (Engine control Unit) or ECM (Engine control Module) for diagnostics.</p>
-            <div class="small-divider">
+            <div class="small-divider"></div>
             <h3>Specialty Tools</h3>
-            <div class="small-divider">
+            <div class="small-divider"></div>
             <h4>Hand-powered Vacuum Pump</h4>
             <p>A hand pump that will generate a vacuum to help empty a fluid reservoir or aid in bleeding air out of a hydraulic system.</p>
             <h4>Caliper Spreaders</h4>
